@@ -30,8 +30,6 @@ function data (result, word){
     infoText.innerHTML = `Cannot find meaning of <span>"${word}"</span>.Please try to find meaning of another word`;
   }else
   {
-
-    console.log(result);
     wrapper.classList.add("active");
     let definitions = result[0].meanings[0].definitions[0];
      phonetics =  result[0].phonetics[0].text;
@@ -44,8 +42,6 @@ function data (result, word){
      
       audio = new Audio(result[0].phonetics[0].audio);
      document.querySelector(".synonym span").innerHTML = result[0].meanings[0].synonyms ?? 'no synonyms here';
-
-   
    }
   }
   volume.addEventListener("click",()=> {
