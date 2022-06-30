@@ -42,14 +42,14 @@ function data (result, word){
      document.querySelector(".example span").innerHTML = definitions.example ?? 'no examples here';
      
      
-      audio = new Audio("https:" + result[0].phonetics[0].audio);
+      audio = new Audio(result[0].phonetics[0].audio);
      document.querySelector(".synonym span").innerHTML = result[0].meanings[0].synonyms ?? 'no synonyms here';
 
    
    }
   }
   volume.addEventListener("click",()=> {
-    audio.play(Audio);
+    audio.play();
    });
   
   removeIcon.addEventListener("click" ,()=>{
@@ -57,4 +57,4 @@ function data (result, word){
     searchInput.focus() ;
     wrapper.classList.remove("active");
     infoText.innerHTML='Type any existing word and press enter to get meaning, example,synonyms, etc.';
-  })
+  });
